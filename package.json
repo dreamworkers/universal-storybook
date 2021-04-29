@@ -4,7 +4,7 @@
     "description": "Universal storybook for multiple frameworks",
     "main": "index.js",
     "repository": {
-        "url": "https://github.com/dreamworkers/universal-storybook.git",
+        "url": "https://github.com/dreamworkers/universal-storybook",
         "type": "git"
     },
     "author": "Abhisek Pandey",
