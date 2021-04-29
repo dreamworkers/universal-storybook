@@ -1,0 +1,13 @@
+{
+    "name": "universal-storybook",
+    "version": "1.0.0",
+    "description": "Universal storybook for multiple frameworks",
+    "main": "index.js",
+    "repository": {
+        "url": "https://github.com/dreamworkers/universal-storybook.git",
+        "type": "git"
+    },
+    "author": "Abhisek Pandey",
+    "license": "MIT",
+    "private": false
+}
