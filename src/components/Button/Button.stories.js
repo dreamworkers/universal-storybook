@@ -1,36 +1,31 @@
 import React from "react";
 
 import { Button } from "./Button";
+import {
+  ArgTypesButton,
+  ArgsButtonPrimary,
+  ArgsButtonSecondary,
+  ArgsButtonLarge,
+  ArgsButtonSmall,
+} from "./Button.story.config";
 
+// eslint-disable-next-line import/no-anonymous-default-export
 export default {
-  title: "Example/Button",
+  title: "React/Atoms/Button",
   component: Button,
-  argTypes: {
-    backgroundColor: { control: "color" },
-  },
+  argTypes: ArgTypesButton,
 };
 
 const Template = (args) => <Button {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = {
-  primary: true,
-  label: "Button",
-};
+Primary.args = ArgsButtonPrimary;
 
 export const Secondary = Template.bind({});
-Secondary.args = {
-  label: "Button",
-};
+Secondary.args = ArgsButtonSecondary;
 
 export const Large = Template.bind({});
-Large.args = {
-  size: "large",
-  label: "Button",
-};
+Large.args = ArgsButtonLarge;
 
 export const Small = Template.bind({});
-Small.args = {
-  size: "small",
-  label: "Button",
-};
+Small.args = ArgsButtonSmall;
