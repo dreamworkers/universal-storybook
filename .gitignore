@@ -8,11 +8,9 @@
 # testing
 /coverage
 
-/archive
 /build
 .cache/
 dist/
-*/__generated__/*
 
 # misc
 .DS_Store
