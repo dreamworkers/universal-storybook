@@ -1,4 +1,62 @@
+import { addParameters, addDecorator } from "@storybook/react";
+import { Parser } from "html-to-react";
 
+/**
+ * Configuration for previewing HTML and React stories
+ */
+const htmlToReactParser = new Parser();
+const renderFrameworkBaseStories = (storyFn, { args }) => {
+  const { render } = args || {};
+
+  switch (render) {
+    case "html":
+      return htmlToReactParser.parse(storyFn());
+    default:
+      return storyFn();
+  }
+};
+
+addDecorator(renderFrameworkBaseStories);
+
+addParameters({
+  docs: {
+    prepareForInline: renderFrameworkBaseStories,
+    inlineStories: true,
+  },
+});
+
+/**
+ * Configuration for design tokens
+ */
+const tokenContext = require.context(
+  "!!raw-loader!../src",
+  true,
+  /.\.(css|less|scss|svg)$/
+);
+
+const tokenFiles = tokenContext.keys().map(function (filename) {
+  return { filename: filename, content: tokenContext(filename).default };
+});
+
+/**
+ * Preview parameters
+ */
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
-}
+  a11y: {
+    element: "#root",
+    config: {},
+    options: {},
+    manual: true,
+  },
+  controls: {
+    matchers: {
+      color: /(background|color)$/i,
+      date: /Date$/,
+    },
+  },
+
+  designToken: {
+    files: tokenFiles,
+  },
+};
