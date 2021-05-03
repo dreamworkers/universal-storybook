@@ -1,0 +1,37 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+
+import { ButtonStory } from "./Button.html";
+import {
+  ArgTypesButtonHtml,
+  ArgsButtonPrimaryHtml,
+  ArgsButtonSecondaryHtml,
+  ArgsButtonLargeHtml,
+  ArgsButtonSmallHtml,
+} from "./Button.story.config";
+
+import "./button.css";
+
+<Meta title="Web Core/Atoms/Buttons" />
+
+<Canvas withSource="open">
+  <Story
+    name="Primary"
+    argTypes={ArgTypesButtonHtml}
+    args={ArgsButtonPrimaryHtml}
+  >
+    {ButtonStory.bind({})}
+  </Story>
+  <Story
+    name="Secondary"
+    argTypes={ArgTypesButtonHtml}
+    args={ArgsButtonSecondaryHtml}
+  >
+    {ButtonStory.bind({})}
+  </Story>
+  <Story name="Large" argTypes={ArgTypesButtonHtml} args={ArgsButtonLargeHtml}>
+    {ButtonStory.bind({})}
+  </Story>
+  <Story name="Small" argTypes={ArgTypesButtonHtml} args={ArgsButtonSmallHtml}>
+    {ButtonStory.bind({})}
+  </Story>
+</Canvas>

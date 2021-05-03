@@ -1,13 +1,60 @@
 {
-    "name": "universal-storybook",
-    "version": "1.0.0",
-    "description": "Universal storybook for multiple frameworks",
-    "main": "index.js",
-    "repository": {
-        "url": "https://github.com/dreamworkers/universal-storybook",
-        "type": "git"
-    },
-    "author": "Abhisek Pandey",
-    "license": "MIT",
-    "private": false
+  "name": "universal-storybook",
+  "version": "0.1.0",
+  "description": "Universal storybook for multiple frameworks",
+  "repository": "https://github.com/dreamworkers/universal-storybook.git",
+  "author": "Abhisek Pandey",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "storybook": "start-storybook -p 6006 -s public --no-manager-cache",
+    "build-storybook": "build-storybook -s -o public"
+  },
+  "dependencies": {
+    "html-to-react": "^1.4.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3"
+  },
+  "devDependencies": {
+    "@storybook/addon-a11y": "^6.2.9",
+    "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-links": "^6.2.9",
+    "@storybook/addon-storyshots": "^6.2.9",
+    "@storybook/addon-storyshots-puppeteer": "^6.2.9",
+    "@storybook/addon-storysource": "^6.2.9",
+    "@storybook/html": "^6.2.9",
+    "@storybook/preset-create-react-app": "^3.1.7",
+    "@storybook/react": "^6.2.9",
+    "@storybook/theming": "^6.2.9",
+    "storybook-design-token": "^1.0.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "babel": {
+    "plugins": [
+      [
+        "@babel/plugin-proposal-private-property-in-object",
+        {
+          "loose": true
+        }
+      ]
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
