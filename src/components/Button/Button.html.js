@@ -8,11 +8,11 @@ const getClassName = ({ primary, size }) => {
 };
 
 const getBackgroundColor = (backgroundColor) =>
-  backgroundColor ? `background-color: ${backgroundColor}` : "";
+  backgroundColor ? ` style="background-color: ${backgroundColor}"` : "";
 
 export const ButtonStory = ({ label, backgroundColor, primary, size }) => {
   return `<button type="button" className="${getClassName({
     primary,
     size,
-  })}" style="${getBackgroundColor(backgroundColor)}" > ${label} </button>`;
+  })}"${getBackgroundColor(backgroundColor)}>${label}</button>`;
 };
