@@ -1,11 +1,9 @@
 import "./button.css";
 
 export const getClassName = ({ primary, size }) => {
-  const classes = ["storybook-button"];
-  classes.push(
-    primary ? "storybook-button--primary" : "storybook-button--secondary"
-  );
-  if (size) classes.push(`storybook-button storybook-button--${size}`);
+  const classes = ["button"];
+  classes.push(primary ? "button--primary" : "button--secondary");
+  if (size) classes.push(`button--${size}`);
   return classes.join(" ");
 };
 
