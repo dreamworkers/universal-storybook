@@ -1,0 +1,21 @@
+/**
+* Available presenters: https://github.com/UX-and-I/storybook-design-token#available-presenters
+*/
+
+:root {
+  /**
+  * @tokens Animations
+  * @presenter Animation
+  */
+
+  --animation-rotate: rotate 1.2s infinite cubic-bezier(0.55, 0, 0.1, 1);
+
+  /**
+  * @tokens Colors
+  * @presenter Color
+  */
+
+  --b100: hsl(240, 100%, 90%);
+  --b200: hsl(240, 100%, 80%);
+  --b300: hsl(240, 100%, 70%);
+}
