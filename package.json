@@ -13,7 +13,7 @@
     "storybook:generate": "build-storybook -s ./static -o ./public/storybook",
     "storybook:prebuild": "yarn test:output",
     "test": "jest",
-    "test:output": "jest --json --outputFile=./.storybook/.jest-test-results.json || true --testPathIgnorePatterns=./src/__tests__/{storyshot,storyshotImage}.test.js"
+    "test:output": "jest --json --outputFile=./.storybook/.jest-test-results.json || true --testPathIgnorePatterns=./src/.tests/{storyshot,storyshotImage}.test.js"
   },
   "dependencies": {
     "html-to-react": "^1.4.5",
