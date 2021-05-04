@@ -7,11 +7,14 @@
 
 # testing
 /coverage
+.jest-test-results.json
 
+# builds
 /build
 .cache/
-dist/
-storybook-static/
+/dist
+/public
+/storybook-static
 
 # misc
 .DS_Store
