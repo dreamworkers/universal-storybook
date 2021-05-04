@@ -1,0 +1,30 @@
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+
+import { TextStory } from "./Text.html";
+import { ArgTypesTextHtml, ArgsTextPrimaryHtml } from "./Text.story.config";
+
+<!-- Stories -->
+
+<Meta title="Web Core/Atoms/Text" />
+
+<Canvas withSource="open">
+  <Story
+    name="Basic text"
+    argTypes={ArgTypesTextHtml}
+    args={ArgsTextPrimaryHtml}
+  >
+    {TextStory.bind({})}
+  </Story>
+</Canvas>
+
+<!-- Documentation -->
+
+# Text
+
+## Basic Text
+
+<p>Text</p>
+
+```
+<p>Text</p>
+```
