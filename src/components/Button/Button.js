@@ -1,7 +1,7 @@
 import React from "react";
 
 import { PropsButton, ArgsButton } from "./Button.story.config";
-import "./button.css";
+import "./button.less";
 
 /**
  * Primary UI component for user interaction

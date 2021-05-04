@@ -1,4 +1,4 @@
-import "./button.css";
+import "./button.less";
 
 const getClassName = ({ primary, size }) => {
   const classes = ["button"];
