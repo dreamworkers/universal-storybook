@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
  */
 
 export const ArgTypesHeading = {
-  label: {
+  content: {
     control: {
       type: "text",
     },
@@ -25,16 +25,16 @@ export const ArgsHeading = {
 };
 
 export const ArgsHeadingLarge = {
-  label: "Heading",
+  content: "Heading",
   ...ArgsHeading,
   size: "large",
 };
 export const ArgsHeadingMedium = {
-  label: "Heading",
+  content: "Heading",
   ...ArgsHeading,
 };
 export const ArgsHeadingSmall = {
-  label: "Heading",
+  content: "Heading",
   ...ArgsHeading,
   size: "small",
 };
@@ -47,5 +47,5 @@ export const PropsHeading = {
   primary: PropTypes.bool,
   color: PropTypes.string,
   size: PropTypes.oneOf(["small", "medium", "large"]),
-  label: PropTypes.string.isRequired,
+  content: PropTypes.string.isRequired,
 };

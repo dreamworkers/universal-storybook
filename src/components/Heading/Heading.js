@@ -6,14 +6,14 @@ import "./heading.less";
 /**
  * Primary UI component for user interaction
  */
-export const Heading = ({ color, size, label, ...props }) => {
+export const Heading = ({ color, size, content, ...props }) => {
   return (
     <h1
-      className={["button", `button--${size}`].join(" ")}
+      className={["heading", `heading--${size}`].join(" ")}
       style={color && { color }}
       {...props}
     >
-      {label}
+      {content}
     </h1>
   );
 };
