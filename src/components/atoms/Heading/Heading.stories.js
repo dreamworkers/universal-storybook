@@ -13,6 +13,9 @@ export default {
   title: "React/Atoms/Heading",
   component: Heading,
   argTypes: ArgTypesHeading,
+  parameters: {
+    jest: ["Heading.test.js"],
+  },
 };
 
 const Template = (args) => <Heading {...args} />;
