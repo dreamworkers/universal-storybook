@@ -1,5 +1,8 @@
 import { addParameters, addDecorator } from "@storybook/react";
 import { Parser } from "html-to-react";
+import { withTests } from "@storybook/addon-jest";
+
+import results from "./.jest-test-results.json";
 
 /**
  * Configuration for previewing HTML and React stories
@@ -37,6 +40,15 @@ const tokenContext = require.context(
 const tokenFiles = tokenContext.keys().map(function (filename) {
   return { filename: filename, content: tokenContext(filename).default };
 });
+
+/**
+ * Configuration for components unit testing using Jest
+ */
+addDecorator(
+  withTests({
+    results,
+  })
+);
 
 /**
  * Preview parameters

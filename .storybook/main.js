@@ -14,5 +14,6 @@ module.exports = {
     "storybook-design-token",
     "@storybook/addon-storysource",
     "@storybook/preset-ant-design",
+    "@storybook/addon-jest",
   ],
 };

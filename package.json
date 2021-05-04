@@ -7,8 +7,13 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "storybook": "start-storybook -p 6006 -s public --no-manager-cache",
-    "build-storybook": "build-storybook -s -o public"
+    "storybook": "yarn storybook:prebuild && yarn storybook:dev",
+    "storybook:build": "yarn storybook:prebuild && yarn storybook:generate",
+    "storybook:dev": "start-storybook -p 6006 -s ./static --no-manager-cache",
+    "storybook:generate": "build-storybook -s ./static -o ./public/storybook",
+    "storybook:prebuild": "yarn test:output",
+    "test": "jest",
+    "test:output": "jest --json --outputFile=./.storybook/.jest-test-results.json || true --testPathIgnorePatterns=./src/__tests__/{storyshot,storyshotImage}.test.js"
   },
   "dependencies": {
     "html-to-react": "^1.4.5",
@@ -17,8 +22,10 @@
     "react-scripts": "4.0.3"
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.13.13",
     "@storybook/addon-a11y": "^6.2.9",
     "@storybook/addon-essentials": "^6.2.9",
+    "@storybook/addon-jest": "^6.2.9",
     "@storybook/addon-links": "^6.2.9",
     "@storybook/addon-storyshots": "^6.2.9",
     "@storybook/addon-storyshots-puppeteer": "^6.2.9",
@@ -28,22 +35,17 @@
     "@storybook/preset-create-react-app": "^3.1.7",
     "@storybook/react": "^6.2.9",
     "@storybook/theming": "^6.2.9",
+    "babel-jest": "^26.6.3",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "jest": "^26.6.3",
     "storybook-design-token": "^1.0.2"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
-  },
-  "babel": {
-    "plugins": [
-      [
-        "@babel/plugin-proposal-private-property-in-object",
-        {
-          "loose": true
-        }
-      ]
     ]
   },
   "browserslist": {
