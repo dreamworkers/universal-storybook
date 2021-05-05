@@ -2,7 +2,7 @@ import React from "react";
 import { configure, shallow } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 
-import { Heading } from "../../components/atoms/Heading/Heading";
+import { Heading } from "./Heading";
 
 configure({ adapter: new Adapter() });
 

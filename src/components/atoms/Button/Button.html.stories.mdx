@@ -1,6 +1,6 @@
 import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
 
-import { ButtonStory } from "./Button.html";
+import { ButtonHtml } from "./Button.html";
 import {
   ArgTypesButtonHtml,
   ArgsButtonPrimaryHtml,
@@ -19,20 +19,20 @@ import {
     argTypes={ArgTypesButtonHtml}
     args={ArgsButtonPrimaryHtml}
   >
-    {ButtonStory.bind({})}
+    {ButtonHtml.bind({})}
   </Story>
   <Story
     name="Secondary"
     argTypes={ArgTypesButtonHtml}
     args={ArgsButtonSecondaryHtml}
   >
-    {ButtonStory.bind({})}
+    {ButtonHtml.bind({})}
   </Story>
   <Story name="Large" argTypes={ArgTypesButtonHtml} args={ArgsButtonLargeHtml}>
-    {ButtonStory.bind({})}
+    {ButtonHtml.bind({})}
   </Story>
   <Story name="Small" argTypes={ArgTypesButtonHtml} args={ArgsButtonSmallHtml}>
-    {ButtonStory.bind({})}
+    {ButtonHtml.bind({})}
   </Story>
 </Canvas>
 

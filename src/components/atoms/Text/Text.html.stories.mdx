@@ -1,11 +1,16 @@
 import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
 
-import { TextStory } from "./Text.html";
+import { TextHtml } from "./Text.html";
 import { ArgTypesTextHtml, ArgsTextPrimaryHtml } from "./Text.story.config";
 
 <!-- Stories -->
 
-<Meta title="Web Core/Atoms/Text" />
+<Meta
+  title="Web Core/Atoms/Text"
+  parameters={{
+    jest: ["Text.html.test.js"],
+  }}
+/>
 
 <Canvas withSource="open">
   <Story
@@ -13,7 +18,7 @@ import { ArgTypesTextHtml, ArgsTextPrimaryHtml } from "./Text.story.config";
     argTypes={ArgTypesTextHtml}
     args={ArgsTextPrimaryHtml}
   >
-    {TextStory.bind({})}
+    {TextHtml.bind({})}
   </Story>
 </Canvas>
 

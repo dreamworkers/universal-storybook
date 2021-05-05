@@ -10,7 +10,7 @@ const getClassName = ({ primary, size }) => {
 const getBackgroundColor = (backgroundColor) =>
   backgroundColor ? ` style="background-color: ${backgroundColor}"` : "";
 
-export const ButtonStory = ({ label, backgroundColor, primary, size }) => {
+export const ButtonHtml = ({ label, backgroundColor, primary, size }) => {
   return `<button type="button" className="${getClassName({
     primary,
     size,
