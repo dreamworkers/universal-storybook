@@ -1,0 +1,60 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest/globals": true
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "plugins": ["react", "react-hooks", "jsx-a11y", "prettier"],
+  "extends": ["plugin:react/recommended", "airbnb", "prettier"],
+  "rules": {
+    "prettier/prettier": "error",
+    "import/prefer-default-export": "off",
+    "react/jsx-filename-extension": "off",
+    "react/jsx-props-no-spreading": "off",
+    "arrow-body-style": ["error", "as-needed"],
+    "no-param-reassign": [2, { "props": false }],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never",
+        "tsx": "never",
+        "js": "never",
+        "jsx": "never"
+      }
+    ],
+    "react/no-children-prop": 0,
+    "space-before-function-paren": 0,
+    "react/prop-types": "off",
+    "react/jsx-handler-names": 0,
+    "react/jsx-fragments": 0,
+    "react/no-unused-prop-types": "error",
+    "import/export": 0
+  },
+  "overrides": [
+    {
+      "files": ["**/*.test.js"],
+      "extends": ["plugin:jest/recommended", "plugin:jest/style"]
+    }
+  ],
+  "settings": {
+    "import/resolver": {
+      "root-import": {
+        "rootPathPrefix": "@",
+        "rootPathSuffix": "src",
+        "extensions": [".js", ".ts", ".tsx", ".jsx", ".mdx"]
+      }
+    }
+  }
+}
