@@ -5,10 +5,10 @@
 export const ArgTypesText = {
   content: {
     control: {
-      type: "text",
+      type: 'text',
     },
   },
-  color: { control: "color" },
+  color: { control: 'color' },
 };
 
 export const ArgsText = {
@@ -32,7 +32,7 @@ export const ArgTypesTextHtml = {
 };
 
 export const ArgsTextHtml = {
-  render: "html",
+  render: 'html',
 };
 
 export const ArgsTextPrimaryHtml = {

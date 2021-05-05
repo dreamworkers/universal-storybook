@@ -1,15 +1,15 @@
 module.exports = {
   moduleNameMapper: {
-    "^.+\\.(css|less|scss)$": "babel-jest",
+    '^.+\\.(css|less|scss)$': 'babel-jest',
   },
-  transformIgnorePatterns: ["/node_modules/(?!@babel).+\\.js$"],
+  transformIgnorePatterns: ['/node_modules/(?!@babel).+\\.js$'],
   transform: {
-    "^.+\\.js$": "babel-jest",
+    '^.+\\.js$': 'babel-jest',
   },
-  moduleFileExtensions: ["js", "json"],
+  moduleFileExtensions: ['js', 'json'],
   collectCoverageFrom: [
-    "./**/*.{js,jsx,ts,tsx}",
-    "!src/index.{js,jsx,tsx}",
-    "!src/.tests/",
+    './**/*.{js,jsx,ts,tsx}',
+    '!src/index.{js,jsx,tsx}',
+    '!src/.tests/',
   ],
 };

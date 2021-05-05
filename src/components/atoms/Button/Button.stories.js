@@ -1,17 +1,17 @@
-import React from "react";
+import React from 'react';
 
-import { Button } from "./Button";
+import { Button } from './Button';
 import {
   ArgTypesButton,
   ArgsButtonPrimary,
   ArgsButtonSecondary,
   ArgsButtonLarge,
   ArgsButtonSmall,
-} from "./Button.story.config";
+} from './Button.story.config';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
-  title: "React/Atoms/Button",
+  title: 'React/Atoms/Button',
   component: Button,
   argTypes: ArgTypesButton,
 };

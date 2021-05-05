@@ -1,8 +1,8 @@
-import { addParameters, addDecorator } from "@storybook/react";
-import { Parser } from "html-to-react";
-import { withTests } from "@storybook/addon-jest";
+import { addParameters, addDecorator } from '@storybook/react';
+import { Parser } from 'html-to-react';
+import { withTests } from '@storybook/addon-jest';
 
-import results from "./.jest-test-results.json";
+import results from './.jest-test-results.json';
 
 /**
  * Configuration for previewing HTML and React stories
@@ -12,7 +12,7 @@ const renderFrameworkBaseStories = (storyFn, { args }) => {
   const { render } = args || {};
 
   switch (render) {
-    case "html":
+    case 'html':
       return htmlToReactParser.parse(storyFn());
     default:
       return storyFn();
@@ -32,7 +32,7 @@ addParameters({
  * Configuration for design tokens
  */
 const tokenContext = require.context(
-  "!!raw-loader!../src",
+  '!!raw-loader!../src',
   true,
   /.\.(css|less|scss|svg)$/
 );
@@ -54,9 +54,9 @@ addDecorator(
  * Preview parameters
  */
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
+  actions: { argTypesRegex: '^on[A-Z].*' },
   a11y: {
-    element: "#root",
+    element: '#root',
     config: {},
     options: {},
     manual: true,
@@ -69,7 +69,7 @@ export const parameters = {
   },
 
   designToken: {
-    defaultTab: "Colors",
+    defaultTab: 'Colors',
     files: tokenFiles,
   },
 };

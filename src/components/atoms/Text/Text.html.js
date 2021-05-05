@@ -1,7 +1,6 @@
-import "./text.less";
+import './text.less';
 
-const getColor = (color) => (color ? ` style="color: ${color}"` : "");
+const getColor = (color) => (color ? ` style="color: ${color}"` : '');
 
-export const TextHtml = ({ content, color }) => {
-  return `<p${getColor(color)}>${content}</p>`;
-};
+export const TextHtml = ({ content, color }) =>
+  `<p${getColor(color)}>${content}</p>`;

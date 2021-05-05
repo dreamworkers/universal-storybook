@@ -1,4 +1,4 @@
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 /**
  * Common story configuration
@@ -7,36 +7,36 @@ import PropTypes from "prop-types";
 export const ArgTypesHeading = {
   content: {
     control: {
-      type: "text",
+      type: 'text',
     },
   },
-  color: { control: "color" },
+  color: { control: 'color' },
   size: {
-    options: ["small", "medium", "large"],
+    options: ['small', 'medium', 'large'],
     control: {
-      type: "radio",
+      type: 'radio',
     },
   },
 };
 
 export const ArgsHeading = {
   color: null,
-  size: "medium",
+  size: 'medium',
 };
 
 export const ArgsHeadingLarge = {
-  content: "Heading",
+  content: 'Heading',
   ...ArgsHeading,
-  size: "large",
+  size: 'large',
 };
 export const ArgsHeadingMedium = {
-  content: "Heading",
+  content: 'Heading',
   ...ArgsHeading,
 };
 export const ArgsHeadingSmall = {
-  content: "Heading",
+  content: 'Heading',
   ...ArgsHeading,
-  size: "small",
+  size: 'small',
 };
 
 /**
@@ -46,6 +46,6 @@ export const ArgsHeadingSmall = {
 export const PropsHeading = {
   primary: PropTypes.bool,
   color: PropTypes.string,
-  size: PropTypes.oneOf(["small", "medium", "large"]),
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
   content: PropTypes.string.isRequired,
 };

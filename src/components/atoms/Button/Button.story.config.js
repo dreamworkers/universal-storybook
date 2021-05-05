@@ -1,4 +1,4 @@
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
 
 /**
  * Common story configuration
@@ -7,19 +7,19 @@ import PropTypes from "prop-types";
 export const ArgTypesButton = {
   label: {
     control: {
-      type: "text",
+      type: 'text',
     },
   },
-  backgroundColor: { control: "color" },
+  backgroundColor: { control: 'color' },
   primary: {
     control: {
-      type: "boolean",
+      type: 'boolean',
     },
   },
   size: {
-    options: ["small", "medium", "large"],
+    options: ['small', 'medium', 'large'],
     control: {
-      type: "radio",
+      type: 'radio',
     },
   },
   onClick: {
@@ -33,28 +33,28 @@ export const ArgTypesButton = {
 export const ArgsButton = {
   backgroundColor: null,
   primary: false,
-  size: "medium",
+  size: 'medium',
   onClick: undefined,
 };
 
 export const ArgsButtonPrimary = {
-  label: "Button",
+  label: 'Button',
   ...ArgsButton,
   primary: true,
 };
 export const ArgsButtonSecondary = {
-  label: "Button",
+  label: 'Button',
   ...ArgsButton,
 };
 export const ArgsButtonLarge = {
-  label: "Button",
+  label: 'Button',
   ...ArgsButton,
-  size: "large",
+  size: 'large',
 };
 export const ArgsButtonSmall = {
-  label: "Button",
+  label: 'Button',
   ...ArgsButton,
-  size: "small",
+  size: 'small',
 };
 
 /**
@@ -64,7 +64,7 @@ export const ArgsButtonSmall = {
 export const PropsButton = {
   primary: PropTypes.bool,
   backgroundColor: PropTypes.string,
-  size: PropTypes.oneOf(["small", "medium", "large"]),
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
   label: PropTypes.string.isRequired,
   onClick: PropTypes.func,
 };
@@ -81,7 +81,7 @@ export const ArgTypesButtonHtml = {
 };
 
 export const ArgsButtonHtml = {
-  render: "html",
+  render: 'html',
 };
 
 export const ArgsButtonPrimaryHtml = {

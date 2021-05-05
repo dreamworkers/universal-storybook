@@ -1,16 +1,16 @@
-import React from "react";
+import React from 'react';
 
-import { Heading } from "./Heading";
+import { Heading } from './Heading';
 import {
   ArgTypesHeading,
   ArgsHeadingMedium,
   ArgsHeadingLarge,
   ArgsHeadingSmall,
-} from "./Heading.story.config";
+} from './Heading.story.config';
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
-  title: "React/Atoms/Heading",
+  title: 'React/Atoms/Heading',
   component: Heading,
   argTypes: ArgTypesHeading,
 };
