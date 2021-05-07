@@ -3,6 +3,7 @@ import { Parser } from 'html-to-react';
 import { withTests } from '@storybook/addon-jest';
 
 import results from './.jest-test-results.json';
+import '!style-loader!css-loader!less-loader!../src/assets/styles/themes/base.less';
 
 /**
  * Configuration for previewing HTML and React stories
@@ -37,9 +38,9 @@ const tokenContext = require.context(
   /.\.(css|less|scss|svg)$/
 );
 
-const tokenFiles = tokenContext.keys().map(function (filename) {
-  return { filename: filename, content: tokenContext(filename).default };
-});
+const tokenFiles = tokenContext
+  .keys()
+  .map((filename) => ({ filename, content: tokenContext(filename).default }));
 
 /**
  * Configuration for components unit testing using Jest
@@ -49,6 +50,114 @@ addDecorator(
     results,
   })
 );
+/**
+ * Configuration for viewport
+ */
+const customViewport = {
+  xs_max: {
+    name: 'Small mobile',
+    styles: {
+      height: '960px',
+      width: '360px',
+    },
+    type: 'mobile',
+  },
+  mobile_min: {
+    name: 'Mobile (min)',
+    styles: {
+      height: '960px',
+      width: '520px',
+    },
+    type: 'mobile',
+  },
+  mobile_max: {
+    name: 'Mobile (max)',
+    styles: {
+      height: '960px',
+      width: '767px',
+    },
+    type: 'mobile',
+  },
+  tablet_min: {
+    name: 'Tablet (min)',
+    styles: {
+      height: '896px',
+      width: '768px',
+    },
+    type: 'mobile',
+  },
+  tablet_max: {
+    name: 'Tablet (max)',
+    styles: {
+      height: '896px',
+      width: '991px',
+    },
+    type: 'mobile',
+  },
+  desktop_min: {
+    name: 'Desktop (min)',
+    styles: {
+      height: '1112px',
+      width: '992px',
+    },
+    type: 'desktop',
+  },
+  desktop_max: {
+    name: 'Desktop (max)',
+    styles: {
+      height: '1112px',
+      width: '1199px',
+    },
+    type: 'desktop',
+  },
+
+  xl_desktop: {
+    name: 'XL Desktop',
+    styles: {
+      height: '1112px',
+      width: '1200px',
+    },
+    type: 'desktop',
+  },
+  xxl_desktop: {
+    name: 'XXL Desktop',
+    styles: {
+      height: '1112px',
+      width: '1440px',
+    },
+    type: 'desktop',
+  },
+};
+
+/**
+ * Configuration for backgrounds
+ */
+const customBackgrounds = [
+  {
+    name: 'light mode',
+    value: '#fff',
+  },
+  {
+    name: 'dark mode',
+    value: '#111',
+  },
+  {
+    name: 'misty rose',
+    value: '#ead7d7',
+  },
+  {
+    name: 'blue purple',
+    value: '#7d82b8',
+  },
+  {
+    name: 'dark purple',
+    value: '#412234',
+  },
+  {
+    name: 'rose',
+    value: '#ff007f',
+  },
+];
 
 /**
  * Preview parameters
@@ -67,9 +176,20 @@ export const parameters = {
       date: /Date$/,
     },
   },
-
   designToken: {
     defaultTab: 'Colors',
     files: tokenFiles,
+    styleInjection:
+      '@import url("styles/inc/fonts.css"); @import url("styles/inc/storybook-base.css");',
+  },
+  options: {
+    storySort: {
+      order: ['React', 'Web Core'],
+    },
+  },
+  viewport: { viewports: customViewport },
+  backgrounds: {
+    default: 'light mode',
+    values: customBackgrounds,
   },
 };

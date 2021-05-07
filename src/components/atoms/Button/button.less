@@ -1,10 +1,10 @@
-@import "../../../globals/tokens.less";
+@import '@Styles/inc/tokens.less';
 
 button {
-  font-family: @font-family-base;
-  font-weight: 700;
+  font-family: @family-font-base;
+  font-weight: @weight-font-bold;
   border: 0;
-  border-radius: 3em;
+  border-radius: @border-radius-button;
   cursor: pointer;
   display: inline-block;
   line-height: 1;
@@ -12,24 +12,24 @@ button {
 
 .button {
   &--primary {
-    color: @white;
-    background-color: @blue;
+    color: @color-font-invert-base;
+    background-color: @color-background-secondary;
   }
   &--secondary {
-    color: @black;
-    background-color: transparent;
-    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+    color: @color-font-invert-base;
+    background-color: @color-background-tertiary;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 0 0p 1px inset;
   }
   &--small {
-    font-size: 12px;
+    font-size: @size-font-base;
     padding: 10px 16px;
   }
   &--medium {
-    font-size: 14px;
-    padding: 11px 20px;
+    font-size: @size-font-normal;
+    padding: @gutter-xs @gutter-m;
   }
   &--large {
-    font-size: 16px;
-    padding: 12px 24px;
+    font-size: @size-font-medium;
+    padding: @gutter-s @gutter-l;
   }
 }

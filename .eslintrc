@@ -53,8 +53,17 @@
       "root-import": {
         "rootPathPrefix": "@",
         "rootPathSuffix": "src",
-        "extensions": [".js", ".ts", ".tsx", ".jsx", ".mdx"]
-      }
+        "extensions": [".js", ".ts", ".tsx", ".jsx", ".mdx", ".css", ".less"]
+      },
+      "alias": {
+        "map": [
+          ["~", "./src"],
+          ["@Assets", "./src/assets"],
+          ["@Components", "./src/components"],
+          ["@Styles", "./src/assets/styles"]
+        ]
+      },
+      "extensions": [".js", ".ts", ".tsx", ".jsx", ".mdx", ".css", ".less"]
     }
   }
 }
