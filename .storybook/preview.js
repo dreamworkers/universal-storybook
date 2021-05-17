@@ -160,6 +160,19 @@ const customBackgrounds = [
 ];
 
 /**
+ * HTML preview add-on
+ */
+const htmlPreview = [
+  {
+    prettier: {
+      tabWidth: 2,
+      useTabs: false,
+      htmlWhitespaceSensitivity: 'strict',
+    },
+  },
+];
+
+/**
  * Preview parameters
  */
 export const parameters = {
@@ -182,14 +195,15 @@ export const parameters = {
     styleInjection:
       '@import url("styles/inc/fonts.css"); @import url("styles/inc/storybook-base.css");',
   },
+  html: htmlPreview,
+  backgrounds: {
+    default: 'light mode',
+    values: customBackgrounds,
+  },
   options: {
     storySort: {
       order: ['React', 'Web Core'],
     },
   },
   viewport: { viewports: customViewport },
-  backgrounds: {
-    default: 'light mode',
-    values: customBackgrounds,
-  },
 };
